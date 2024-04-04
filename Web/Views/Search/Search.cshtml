@@ -1,0 +1,17 @@
+﻿@model Logic.Resto[]
+
+@foreach (var each in Model)
+{
+    <div class="row">
+        <div class="col-2">@each.Status</div>
+        <div class="col">
+            <div class="row">@each.Name</div>
+            <div class="row">@each.Address</div>
+            <div class="row">@each.Info </div>
+            <div class="row">@each.ValidUntil</div>
+        </div>
+        <div class="col-2">@each.category</div>
+    </div>
+
+    <hr/>
+}

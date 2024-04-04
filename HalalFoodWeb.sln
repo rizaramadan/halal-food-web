@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{38999016-9129-461C-A266-0077B7694A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Tests", "Logic.Tests\Logic.Tests.csproj", "{49D4C0BF-7C2A-4FE3-8396-5C72FC84F464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{41557E96-FE1C-4AF3-B87D-8555D156735B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38999016-9129-461C-A266-0077B7694A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38999016-9129-461C-A266-0077B7694A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38999016-9129-461C-A266-0077B7694A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38999016-9129-461C-A266-0077B7694A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D4C0BF-7C2A-4FE3-8396-5C72FC84F464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D4C0BF-7C2A-4FE3-8396-5C72FC84F464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D4C0BF-7C2A-4FE3-8396-5C72FC84F464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D4C0BF-7C2A-4FE3-8396-5C72FC84F464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41557E96-FE1C-4AF3-B87D-8555D156735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41557E96-FE1C-4AF3-B87D-8555D156735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41557E96-FE1C-4AF3-B87D-8555D156735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41557E96-FE1C-4AF3-B87D-8555D156735B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

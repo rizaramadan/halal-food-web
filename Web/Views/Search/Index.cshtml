@@ -1,0 +1,80 @@
+﻿@model SearchPageModel
+
+<h3>
+    Search Brand
+    <span class="htmx-indicator">
+        <img src="/img/bars.svg"/> Searching...
+    </span>
+</h3>
+<div class="row m-1">
+    <input class="form-control col" type="search"
+           id="search-input"
+           name="search" placeholder="Begin Typing To Search brand..."
+           hx-post="/search/search"
+           hx-include="#status-select,#wilayah-select,#category-select"
+           hx-trigger="input changed delay:500ms, search"
+           hx-target="#search-results"
+           hx-indicator=".htmx-indicator" />
+    <input class="col-2 m-1" type="button" value="Filter" data-bs-toggle="modal" data-bs-target="#filter-modal" />
+</div>
+<div class="row m-1">
+    <div id="search-results">
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="filter-modal" tabindex="-1" aria-labelledby="filter-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="filter-modal-label">Filter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="status-select">Status</label>
+                        <select class="form-control" id="status-select" name="status">
+                            <option selected>Semua</option>
+                            @foreach (var each in Model.Status)
+                            {
+                                <option value="@each.Key">@each.Value</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="wilayah-select">Wilayah</label>
+                        <select class="form-control" id="wilayah-select"  name="wilayah">
+                            <option selected>Semua</option>
+                            @foreach (var each in Model.Wilayah.OrderBy(w => w))
+                            {
+                                <option value="@each">@each</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="category-select">Kategori</label>
+                        <select class="form-control" id="category-select" name="category">
+                            <option selected>Semua</option>
+                            @foreach (var each in Model.Category.OrderBy(c => c))
+                            {
+                                <option value="@each">@each</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" hx-post="/search/search"
+                        data-bs-dismiss="modal"
+                        class="btn btn-primary"
+                        hx-include="#search-input,#status-select,#wilayah-select,#category-select"
+                        hx-target="#search-results">
+                    Apply Filter
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
